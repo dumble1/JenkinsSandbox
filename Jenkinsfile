@@ -11,10 +11,16 @@ pipeline {
                 echo 'Testing'
             }
         }
-        stage('Deploy') {
+        stage('Deploy - Staging') {
             steps {
-                echo 'Deploying'
+                sh './deploy staging'
+                sh './run-smoke-tests'
             }
+        }
+        stage('Deploy - Production'){
+            steps{
+                sh './deploy production'     
+            {
         }
     }
 }
