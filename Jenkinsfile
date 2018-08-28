@@ -18,9 +18,9 @@ pipeline {
             }
         }
         stage('Deploy - Production'){
-            steps{
+            steps {
                 sh './deploy production'     
-            {
+            }
         }
     }
 }
